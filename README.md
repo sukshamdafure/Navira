@@ -1,16 +1,134 @@
-# React + Vite
+# Cognify — AI Study Assistant
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+**Learn beyond limits.**
 
-Currently, two official plugins are available:
+Cognify is a full-stack AI-powered study assistant designed to make learning easier and more effective. It helps students understand their study material through AI-generated summaries, concept explanations, and quizzes.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- **AI Notes Summarizer:** Convert lengthy study material into concise summaries.
+- **AI Concept Explainer:** Understand difficult concepts through AI-generated explanations.
+- **AI Quiz Generator:** Generate quizzes from your study material.
+- **User Authentication:** Secure registration and login with password hashing and JWT authentication.
+- **Study History:** Save, view, and delete previous learning sessions.
+- **Personalized History:** Each user can access only their own study records.
+- **Responsive Interface:** A clean, responsive dashboard for different screen sizes.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the Oxlint configuration
+**Frontend**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+- React.js
+- Tailwind CSS
+- Vite
+
+**Backend**
+
+- Node.js
+- Express.js
+- Google Gemini API
+
+**Database and Security**
+
+- MongoDB
+- Mongoose
+- JSON Web Tokens (JWT)
+- bcryptjs
+
+## Project Structure
+
+```text
+Cognify/
+├── public/
+├── server/
+│   ├── middleware/
+│   ├── models/
+│   ├── server.js
+│   └── package.json
+├── src/
+│   ├── assets/
+│   ├── App.jsx
+│   ├── App.css
+│   ├── index.css
+│   └── main.jsx
+├── .gitignore
+├── package.json
+└── README.md
+```
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js and npm
+- MongoDB database
+- Google Gemini API key
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/sukshamdafure/Cognify.git
+cd Cognify
+```
+
+### 2. Install frontend dependencies
+
+```bash
+npm install
+```
+
+### 3. Install backend dependencies
+
+```bash
+cd server
+npm install
+```
+
+### 4. Configure environment variables
+
+Create a `.env` file inside the `server` folder:
+
+```env
+GEMINI_API_KEY=your_gemini_api_key
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+```
+
+Replace the placeholder values with your own credentials.
+
+**Never upload your actual `.env` file or expose your API keys and secrets.**
+
+### 5. Start the backend
+
+From the `server` directory:
+
+```bash
+node server.js
+```
+
+### 6. Start the frontend
+
+Open another terminal in the project root:
+
+```bash
+npm run dev
+```
+
+Open the local URL displayed by Vite in your browser.
+
+## Future Improvements
+
+- Deployment for public access.
+- Further improvements to the learning experience and user interface.
+
+## Author
+
+**Suksham Dafure**
+
+Computer Science and Design Student
+
+[GitHub](https://github.com/sukshamdafure)
+
+---
+
+_Built with the goal of making learning smarter, simpler, and more accessible._
