@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+const API_URL = import.meta.env.VITE_API_URL || "";
 function App() {
   const [activeNav, setActiveNav] = useState("dashboard");
   const [studyText, setStudyText] = useState("");
@@ -42,7 +43,7 @@ function App() {
           ? { name: authName, email: authEmail, password: authPassword }
           : { email: authEmail, password: authPassword };
 
-      const response = await fetch(`http://localhost:5000/api/${endpoint}`, {
+      const response = await fetch(`${API_URL}/api/${endpoint}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -89,7 +90,7 @@ function App() {
 
   const fetchHistory = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/history", {
+      const response = await fetch(`${API_URL}/api/history`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -108,7 +109,7 @@ function App() {
 
   const handleDeleteHistory = async (id) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/history/${id}`, {
+      const response = await fetch(`${API_URL}/api/history/${id}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -154,7 +155,7 @@ function App() {
     setResult("");
 
     try {
-      const response = await fetch("http://localhost:5000/api/study", {
+      const response = await fetch(`${API_URL}/api/study`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
