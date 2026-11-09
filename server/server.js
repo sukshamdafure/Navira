@@ -171,7 +171,7 @@ app.post("/api/login", async (req, res) => {
 });
 
 app.get("/api/health", (req, res) => {
-  res.send("Cognify backend is running!");
+  res.send("Navira backend is running!");
 });
 
 app.post("/api/study", authMiddleware, async (req, res) => {

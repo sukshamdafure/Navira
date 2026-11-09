@@ -1,8 +1,8 @@
-# Cognify — AI Study Assistant
+# Navira — AI Study Assistant
 
 **Learn beyond limits.**
 
-Cognify is a full-stack AI-powered study assistant designed to make learning easier and more effective. It helps students understand their study material through AI-generated summaries, concept explanations, and quizzes.
+Navira is a full-stack AI-powered study assistant designed to make learning easier and more effective. It helps students understand their study material through AI-generated summaries, concept explanations, and quizzes.
 
 ## Features
 
@@ -38,7 +38,7 @@ Cognify is a full-stack AI-powered study assistant designed to make learning eas
 ## Project Structure
 
 ```text
-Cognify/
+Navira/
 ├── public/
 ├── server/
 │   ├── middleware/
@@ -67,8 +67,8 @@ Cognify/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/sukshamdafure/Cognify.git
-cd Cognify
+git clone https://github.com/sukshamdafure/Navira
+cd Navira
 ```
 
 ### 2. Install frontend dependencies
